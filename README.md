@@ -14,19 +14,18 @@ sauce = SauceRest(
         password="sauce-access-key",
         )
 
-
-    print "\033[33mAccount details:\033[0m\n%s\n" % repr(sauce.account_details())
-    print "\033[33mAccount limits:\033[0m\n%s\n" % repr(sauce.account_limits())
-    print "\033[33mAccount activity:\033[0m\n%s\n" % repr(sauce.account_activity())
-    print "\033[33mAccount usage:\033[0m\n%s\n" % repr(sauce.account_usage())
-    print "\033[33mRan %s jobs\033[0m\n" % repr(len(sauce.list_jobs(full=False)))
-    print "\033[33mJob 1:\033[0m\n%s\n" % repr(sauce.show_job(sauce.list_jobs(full=False)[1]['id']))
-    print "\033[33mShow job 1:\033[0m\n%s\n" % repr(sauce.update_job(sauce.list_jobs(full=False)[1]['id'], {'name': 'updated_job'}))
-    print "\033[33mUpate job 1:\033[0m\n%s\n" % repr(sauce.show_job(sauce.list_jobs(full=False)[1]['id']))
-    print "\033[33mList tunnels:\033[0m\n%s\n" % repr(sauce.list_tunnels())
-    print "\033[33mSauce status:\033[0m\n%s\n" % repr(sauce.sauce_status())
-    print "\033[33m10 first Sauce browsers/os combinations:\033[0m\n%s\n" % repr([b for b in sauce.sauce_browsers()[:10]])
-    print "\033[33m10%s tests have been run at sauce.\033[0m\n\n" % repr(sauce.sauce_counter())
+print "\033[33mAccount details:\033[0m\n%s\n" % repr(sauce.account_details())
+print "\033[33mAccount limits:\033[0m\n%s\n" % repr(sauce.account_limits())
+print "\033[33mAccount activity:\033[0m\n%s\n" % repr(sauce.account_activity())
+print "\033[33mAccount usage:\033[0m\n%s\n" % repr(sauce.account_usage())
+print "\033[33mRan %s jobs\033[0m\n" % repr(len(sauce.list_jobs(full=False)))
+print "\033[33mJob 1:\033[0m\n%s\n" % repr(sauce.show_job(sauce.list_jobs(full=False)[1]['id']))
+print "\033[33mShow job 1:\033[0m\n%s\n" % repr(sauce.update_job(sauce.list_jobs(full=False)[1]['id'], {'name': 'updated_job'}))
+print "\033[33mUpate job 1:\033[0m\n%s\n" % repr(sauce.show_job(sauce.list_jobs(full=False)[1]['id']))
+print "\033[33mList tunnels:\033[0m\n%s\n" % repr(sauce.list_tunnels())
+print "\033[33mSauce status:\033[0m\n%s\n" % repr(sauce.sauce_status())
+print "\033[33m10 first Sauce browsers/os combinations:\033[0m\n%s\n" % repr([b for b in sauce.sauce_browsers()[:10]])
+print "\033[33m10%s tests have been run at sauce.\033[0m\n\n" % repr(sauce.sauce_counter())
 ```
 
 ## Supported Methods
