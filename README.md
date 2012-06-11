@@ -94,7 +94,7 @@ sauce = SauceRest(
 	PUT /:username/jobs/:id/stop <br />
 	Terminates a running job. 
       </td>
-      <td> ... </td>
+      <td> stop_job(id, data) </td>
     </tr>
     <tr>
       <td>
