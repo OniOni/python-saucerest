@@ -1,4 +1,4 @@
-# node-saucelabs -- Node wrapper around the Saucelabs REST API
+# python-saucerest -- Python wrapper around the Saucelabs REST API
 
 ## Install
 
@@ -9,6 +9,12 @@
 ## Writting a script
 
 ```python
+sauce = SauceRest(
+        username="sauce-username",
+        password="sauce-access-key",
+        )
+
+
     print "\033[33mAccount details:\033[0m\n%s\n" % repr(sauce.account_details())
     print "\033[33mAccount limits:\033[0m\n%s\n" % repr(sauce.account_limits())
     print "\033[33mAccount activity:\033[0m\n%s\n" % repr(sauce.account_activity())
