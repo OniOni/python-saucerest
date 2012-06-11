@@ -59,6 +59,13 @@ class SauceRest(object):
             data=data
             )
 
+    def stop_job(self, id, data):
+        return self.rest(
+            url="/%s/jobs/%s/stop" % (self._username, id),
+            method='PUT',
+            data=data
+            )
+
     def list_tunnels(self):
         return self.rest(
             url="/%s/tunnels" % self._username
@@ -117,8 +124,8 @@ class SauceRest(object):
 
 if __name__ == '__main__':
     sauce = SauceRest(
-        username="msabourin",
-        password="1170044f-a674-4c2e-80ca-edb59525eff7",
+        username="sauce-username",
+        password="sauce-access-key",
         )
     
     print "\033[33mAccount details:\033[0m\n%s\n" % repr(sauce.account_details())
