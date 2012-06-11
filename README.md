@@ -2,14 +2,19 @@
 
 ## Install
 
+Make sure you have python and pip.
+
+Go ahead and install python-saucerest
 ```shell
-...
+pip install python-saucerest
 ```
 
 ## Writting a script
 
 ```python
-sauce = SauceRest(
+import saucelabs.saucerest as saucerest
+
+sauce = saucerest.SauceRest(
         username="sauce-username",
         password="sauce-access-key",
         )
