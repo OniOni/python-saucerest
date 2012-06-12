@@ -147,21 +147,29 @@ print "\033[33m10%s tests have been run at sauce.\033[0m\n\n" % repr(sauce.sauce
 	POST /users/:id <br />
 	Create a new sub-account.
       </td>
-      <td> ... </td>
+      <td> 
+      	create_subaccount(data) <br />
+	data (dict): Information about your new subaccount <br />
+	See saucerest [doc](saucelabs.com/docs/saucerest#partners) for more information.
+      </td>
     </tr>
     <tr>
       <td>
 	POST /users/:id/subscription <br />
 	Update a sub-account Sauce Labs service plan.
       </td>
-      <td> ... </td>
+      <td> 
+      	update_subaccount(data)
+	data (dict): Plan information
+	See saucerest [doc](saucelabs.com/docs/saucerest#partners) for more information.
+      </td>
     </tr>
     <tr>
       <td>
 	DELETE /users/:id/subscription <br />
 	Unsubscribe a sub-account from it's Sauce Labs service plan.
       </td>
-      <td> ... </td>
+      <td> unsubscribe_subaccount() </td>
     </tr>
   </tbody>
 </table>
