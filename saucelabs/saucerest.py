@@ -97,6 +97,26 @@ class SauceRest(object):
             url="/info/counter"
             )
 
+    def create_subaccount(self, data):
+        return self.rest(
+            url="/users/%s" % self._username,
+            method='POST',
+            data=data
+            )
+    
+    def update_subaccount(self, data):
+        return self.rest(
+            url="/users/%s/subscription" % self._username,
+            method='POST',
+            data=data
+            )
+
+    def unsuscribe_subaccount(self):
+        return self.rest(
+            url="/users/%s/subscription" % self._username,
+            method='POST'
+            )
+
     def rest(self, url, method='GET', data=None):
         ret= False
         connection =  httplib.HTTPSConnection(self._host)
