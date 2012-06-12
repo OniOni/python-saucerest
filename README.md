@@ -150,7 +150,7 @@ print "\033[33m10%s tests have been run at sauce.\033[0m\n\n" % repr(sauce.sauce
       <td> 
       	create_subaccount(data) <br />
 	data (dict): Information about your new subaccount <br />
-	See saucerest [doc](saucelabs.com/docs/saucerest#partners) for more information.
+	See saucerest <a href="http://saucelabs.com/docs/saucerest#partners">docs</a> for more information.
       </td>
     </tr>
     <tr>
@@ -161,7 +161,7 @@ print "\033[33m10%s tests have been run at sauce.\033[0m\n\n" % repr(sauce.sauce
       <td> 
       	update_subaccount(data)
 	data (dict): Plan information
-	See saucerest [doc](saucelabs.com/docs/saucerest#partners) for more information.
+	See saucerest <a href="http://saucelabs.com/docs/saucerest#partners">docs</a> for more information.
       </td>
     </tr>
     <tr>
