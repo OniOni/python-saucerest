@@ -104,16 +104,16 @@ class SauceRest(object):
             data=data
             )
     
-    def update_subaccount(self, data):
+    def update_subaccount(self, sub, data):
         return self.rest(
-            url="/users/%s/subscription" % self._username,
+            url="/users/%s/subscription" % sub,
             method='POST',
             data=data
             )
 
-    def unsuscribe_subaccount(self):
+    def unsubscribe_subaccount(self, sub):
         return self.rest(
-            url="/users/%s/subscription" % self._username,
+            url="/users/%s/subscription" % sub,
             method='POST'
             )
 
@@ -130,7 +130,7 @@ class SauceRest(object):
         connection.request(method, self._api + url, data, headers)
         res = connection.getresponse()
 
-        if res.status == 200:
+        if (res.status / 100 == 2):
             try:
                 ret = json.loads(res.read())
             except Exception as e:
@@ -160,4 +160,4 @@ if __name__ == '__main__':
     print "\033[33mSauce status:\033[0m\n%s\n" % repr(sauce.sauce_status())
     print "\033[33m10 first Sauce browsers/os combinations:\033[0m\n%s\n" % repr([b for b in sauce.sauce_browsers()[:10]])
     print "\033[33m10%s tests have been run at sauce.\033[0m\n\n" % repr(sauce.sauce_counter())
-    
+
