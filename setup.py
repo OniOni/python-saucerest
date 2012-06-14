@@ -11,7 +11,7 @@ def read(fname):
 setup(
     name = "python-saucerest",
     packages = ['saucelabs'],
-    version = "0.0.2",
+    version = "0.0.3",
     author = "Mathieu Sabourin",
     author_email = "mathieu.c.sabourin@gmail.com",
     maintainer = "Mathieu Sabourin",
