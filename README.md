@@ -159,7 +159,8 @@ print "\033[33m10%s tests have been run at sauce.\033[0m\n\n" % repr(sauce.sauce
 	Update a sub-account Sauce Labs service plan.
       </td>
       <td> 
-      	update_subaccount(data)
+      	update_subaccount(sub, data)
+	sub (str): Sub-account name 
 	data (dict): Plan information
 	See saucerest <a href="http://saucelabs.com/docs/saucerest#partners">docs</a> for more information.
       </td>
@@ -169,7 +170,10 @@ print "\033[33m10%s tests have been run at sauce.\033[0m\n\n" % repr(sauce.sauce
 	DELETE /users/:id/subscription <br />
 	Unsubscribe a sub-account from it's Sauce Labs service plan.
       </td>
-      <td> unsubscribe_subaccount() </td>
+      <td>
+        sub (str): Sub-account name 
+      	unsubscribe_subaccount(sub) 
+      </td>
     </tr>
   </tbody>
 </table>
